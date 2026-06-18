@@ -63,7 +63,7 @@ export const portfolioData = [
 
   `My Micro-Frontend & Architecture knowledge covers: Module Federation (Webpack 5), Nx Monorepo, Single-SPA, SOLID Principles, Clean Architecture, Atomic Design, Feature-Sliced Design, Component-Driven Development, Design Tokens, Storybook, Chromatic, and Design Systems.`,
 
-  `My UI & Styling expertise includes: HTML5 (Semantic, SEO), CSS3, SCSS/SASS, CSS Modules, Styled Components, Emotion, CSS-in-JS, CSS Grid, Flexbox, CSS Custom Properties, CSS Animations & Transitions, CSS Container Queries, Tailwind CSS, ShadCN UI, Radix UI, Headless UI, MUI, Ant Design, Bootstrap, Responsive Design, Mobile-First, Fluid Typography, Figma, Pixel-Perfect UI, and Cross-Browser Compatibility.`,
+  `My UI & Styling expertise includes:  HTML5 (Semantic, SEO), CSS3, SCSS/SASS, CSS Modules, Styled Components, Emotion, CSS-in-JS, CSS Grid, Flexbox, CSS Custom Properties, CSS Animations & Transitions, CSS Container Queries, Tailwind CSS, ShadCN UI, Radix UI, Headless UI, MUI, Ant Design, Bootstrap, Responsive Design, Mobile-First, Fluid Typography, Figma, Pixel-Perfect UI, and Cross-Browser Compatibility.`,
 
   `My Performance & Accessibility expertise includes: Core Web Vitals (LCP, INP, CLS), Lighthouse, WebPageTest, Webpack Bundle Analyzer, Tree Shaking, Lazy Loading, Prefetching, Preloading, List Virtualization (react-window, TanStack Virtual), Image Optimization, Web Workers, Service Workers, PWA, WCAG 2.1/2.2 AA, Section 508, ARIA, Semantic HTML, Keyboard Navigation, Screen Reader Testing, and axe DevTools.`,
 
