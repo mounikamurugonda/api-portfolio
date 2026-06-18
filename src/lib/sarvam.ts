@@ -17,4 +17,5 @@ export const getSarvamClient = (): OpenAI => {
   });
 };
 
-export const SARVAM_MODEL = 'sarvam-m';
+// sarvam-m is deprecated. Using sarvam-30b (faster, good for chatbot)
+export const SARVAM_MODEL = 'sarvam-30b';
