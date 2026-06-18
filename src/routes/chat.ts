@@ -62,6 +62,7 @@ chatRouter.post('/', async (req, res) => {
     res.json({ reply });
   } catch (error) {
     console.error('Chat error:', error);
-    res.status(500).json({ error: 'Internal server error processing your chat' });
+    const msg = error instanceof Error ? error.message : String(error);
+    res.status(500).json({ error: 'Internal server error processing your chat', detail: msg });
   }
 });

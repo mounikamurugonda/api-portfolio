@@ -27,6 +27,19 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', message: 'Mounika AI Backend Operational' });
 });
 
+// Temporary debug endpoint — remove after confirming env vars
+app.get('/debug', (req, res) => {
+  res.json({
+    env: {
+      SARVAM_API_KEY: !!process.env.SARVAM_API_KEY,
+      SUPABASE_URL: !!process.env.SUPABASE_URL,
+      SUPABASE_SERVICE_ROLE_KEY: !!process.env.SUPABASE_SERVICE_ROLE_KEY,
+      FRONTEND_URL: process.env.FRONTEND_URL || '(not set, defaulting to *)',
+    },
+    node: process.version,
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

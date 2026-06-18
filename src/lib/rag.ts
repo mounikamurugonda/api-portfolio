@@ -7,7 +7,14 @@ class XenovaEmbeddings {
 
   async init() {
     if (!this.extractor) {
-      this.extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
+      // Timeout guard: Vercel cold starts can't cache the model download.
+      // If it takes >5s, fail fast so the try/catch in chat.ts uses FALLBACK_CONTEXT.
+      this.extractor = await Promise.race([
+        pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2'),
+        new Promise((_, reject) =>
+          setTimeout(() => reject(new Error('Embedding model load timeout')), 5000)
+        ),
+      ]);
     }
   }
 
