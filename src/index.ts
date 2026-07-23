@@ -27,7 +27,7 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', message: 'Mounika AI Backend Operational' });
 });
 
-// Temporary debug endpoint — remove after confirming env vars
+// Temporary debug endpoint: remove after confirming env vars
 app.get('/debug', (req, res) => {
   res.json({
     env: {

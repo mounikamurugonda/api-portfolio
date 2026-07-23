@@ -8,7 +8,7 @@ Express + LangChain backend powering the AI chatbot and contact form on [mounika
 |---|---|
 | Server | Node.js, Express, TypeScript (`tsx` in dev) |
 | RAG | LangChain + Supabase pgvector |
-| Embeddings | `Xenova/all-MiniLM-L6-v2` (runs locally in-process, 384 dims — no embedding API cost) |
+| Embeddings | `Xenova/all-MiniLM-L6-v2` (runs locally in-process, 384 dims - no embedding API cost) |
 | LLM | Sarvam AI (`sarvam-m`) |
 | Email | Resend |
 | Hardening | CORS allow-list, express-rate-limit (100 req / 15 min per IP) |
@@ -69,7 +69,7 @@ RESEND_API_KEY=re_...            # Resend dashboard
 FRONTEND_URL=http://localhost:5173  # CORS origin (production: your Vercel URL)
 ```
 
-> The service-role key bypasses row-level security. It must never be committed or exposed to the frontend — `.env` is gitignored.
+> The service-role key bypasses row-level security. It must never be committed or exposed to the frontend - `.env` is gitignored.
 
 ### 3. Database
 
@@ -77,7 +77,7 @@ The SQL schema (contacts table, `documents` pgvector table, and `match_documents
 
 ## 🔄 Updating the AI's knowledge (after a resume change)
 
-1. Edit [`scripts/seed-data.ts`](scripts/seed-data.ts) — each array entry is one retrievable chunk. Keep chunks focused (one role, one skill area, or one fact each).
+1. Edit [`scripts/seed-data.ts`](scripts/seed-data.ts) - each array entry is one retrievable chunk. Keep chunks focused (one role, one skill area, or one fact each).
 2. Re-ingest:
 
 ```bash
@@ -104,9 +104,9 @@ npm start        # node dist/index.js
 
 Endpoints:
 
-- `POST /api/chat` — `{ "message": "..." }` → RAG-grounded answer
-- `POST /api/contact` — `{ "name", "email", "message" }` → saved + emailed
-- `GET /health` — liveness check
+- `POST /api/chat` - `{ "message": "..." }` → RAG-grounded answer
+- `POST /api/contact` - `{ "name", "email", "message" }` → saved + emailed
+- `GET /health` - liveness check
 
 ## 🚀 Deployment
 

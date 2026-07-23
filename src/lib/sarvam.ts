@@ -9,7 +9,7 @@ dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 export const getSarvamClient = (): OpenAI => {
   const apiKey = process.env.SARVAM_API_KEY;
   if (!apiKey) {
-    console.warn('SARVAM_API_KEY not set — chat will fail.');
+    console.warn('SARVAM_API_KEY not set: chat will fail.');
   }
   return new OpenAI({
     apiKey: apiKey || 'missing-key',
